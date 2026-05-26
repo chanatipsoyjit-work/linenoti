@@ -1,5 +1,6 @@
 flask
 line-bot-sdk
-playwright==1.44.0
+playwright
 python-dotenv
 requests
+greenlet
