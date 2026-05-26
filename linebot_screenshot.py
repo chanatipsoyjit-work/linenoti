@@ -11,7 +11,6 @@ from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeo
 from datetime import datetime
 from dotenv import load_dotenv
 import os, threading ,glob
-from pyngrok import ngrok as pyngrok
 
 load_dotenv()
 
@@ -222,4 +221,5 @@ if __name__ == "__main__":
     print("🤖 Line Bot พร้อมทำงาน!")
     print(f"   BASE_URL    : {BASE_URL or '⚠️  ยังไม่ได้ตั้งค่า'}")
     print(f"   สาขาที่รองรับ: {list(BRANCH_MAP.keys())}")
-    app.run(port=5000, debug=False)
+    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)), debug=False)
+
