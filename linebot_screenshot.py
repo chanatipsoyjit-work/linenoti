@@ -42,7 +42,6 @@ EXPECTED_URL = os.getenv("EXPECTED_URL")
 APP_USERNAME = os.getenv("APP_USERNAME")
 APP_PASSWORD = os.getenv("APP_PASSWORD")
 
-# ✅ BASE_URL = ngrok URL เช่น https://xxxx.ngrok-free.app
 BASE_URL = os.getenv("BASE_URL", "").rstrip("/")
 
 # ==============================
@@ -50,8 +49,8 @@ BASE_URL = os.getenv("BASE_URL", "").rstrip("/")
 # ==============================
 BRANCH_MAP = {
     "greenwing":  "https://www.saucedemo.com/inventory.html",
-    "cart":       "https://www.saucedemo.com/cart.html",
-    # "สาขาอื่น": "https://example.com/branch-other",
+    "bigwing":       "https://www.saucedemo.com/cart.html",
+    # "cubhouse": "https://example.com/branch-other",
 }
 
 # ==============================
