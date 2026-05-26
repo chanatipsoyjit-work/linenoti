@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: linebot-screenshot
+    runtime: python
+    buildCommand: pip install -r requirements.txt && playwright install chromium && playwright install-deps
+    startCommand: python linebot_screenshot.py
+    envVars:
+      - key: LINE_CHANNEL_ACCESS_TOKEN
+        sync: false
+      - key: LINE_CHANNEL_SECRET
+        sync: false
+      - key: LOGIN_URL
+        sync: false
+      - key: EXPECTED_URL
+        sync: false
+      - key: APP_USERNAME
+        sync: false
+      - key: APP_PASSWORD
+        sync: false
+      - key: BASE_URL
+        sync: false
