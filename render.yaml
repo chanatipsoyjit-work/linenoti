@@ -1,9 +1,7 @@
 services:
   - type: web
     name: linebot-screenshot
-    runtime: python
-    buildCommand: bash build.sh
-    startCommand: python linebot_screenshot.py
+    runtime: docker
     envVars:
       - key: LINE_CHANNEL_ACCESS_TOKEN
         sync: false
